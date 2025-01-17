@@ -22,7 +22,7 @@ class Evento(val id: Int, val nombre: String, val ciudad: CiudadesValidas, val c
 
         for (entrada in 1..cantidadEntradas){
             print("Introduce el nombre para la entrada $entrada: ")
-            val nombreEntrada = readln()
+            val nombreEntrada = readln().trim()
             require(nombreEntrada.isNotBlank()){"El nombre no puede estar vacio."}
             entradasVendidas ++
             val numEntrada = entradasVendidas
