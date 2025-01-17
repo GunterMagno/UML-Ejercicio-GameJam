@@ -17,7 +17,7 @@ class Usuario(val nombre :String,val email :String, val dni :String){
         val entradasCompradas = entradas[evento]?.size ?: 0
 
         if (cantidadEntradas > 0 || cantidadEntradas <= MAX_Permitido - entradasCompradas){
-            println("ERROR, el usuario $nombre no puede comprar mas entradas para este evento. Actualmente $entradasCompradas entradas compradas, tiene disponible $tantasentradas")
+            println("ERROR, el usuario $nombre no puede comprar mas entradas para este evento. Actualmente $entradasCompradas entradas compradas, tiene disponible ${MAX_Permitido - entradasCompradas}")
             return false
         }
 
